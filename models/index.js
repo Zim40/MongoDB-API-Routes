@@ -8,4 +8,4 @@ const Reaction = require('./Reaction');
 
 
 // export each model
-module.exports = { User, Thoughts, Reactions };
+module.exports = { User, Thoughts, Reaction };
