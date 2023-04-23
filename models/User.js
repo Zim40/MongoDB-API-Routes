@@ -18,23 +18,19 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Thoughts",
   },
-  friends: {
+  friends: [{
     type: Schema.Types.ObjectId,
     ref: "User",
+  }],
   },
-
+{
   toJSON: {
-    getters: true,
     virtuals: true,
   },
+});
 
-  virtuals: {
-    friendCount: {
-      get() {
-        return this.friends.length;
-      },
-    },
-  },
+userSchema.virtual('friendCount').get(function() {
+  return this.friends.length;
 });
 
 // Create instance of User model

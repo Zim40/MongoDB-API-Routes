@@ -7,3 +7,6 @@ const  {
 
 //  /api/users
 router.route('/users').get(getUser).post(createUser);
+
+
+module.exports = router;
