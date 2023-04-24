@@ -38,7 +38,7 @@ module.exports = {
                 { $pull: { reactions: {_id: reactionId } } },
                 { new: true }
             );
-            // console.log(reaction); NULL
+            console.log(reaction); 
 
             if(!reaction) {
                 return res.status(404).json({message: 'Reaction not found!'});
