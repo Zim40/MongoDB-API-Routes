@@ -26,6 +26,8 @@ module.exports = {
   async getSingleUser(req, res) {
     try {
       const user = await User.findOne({ _id: req.params.userId })
+      .populate('thoughts')
+      .exec();
       
       if (!user) {
         return res.status(404).json({ message: "No Student by that ID" });
@@ -77,7 +79,7 @@ module.exports = {
   // Updates a user based on the userId.
   async updateUser(req, res) {
     try {
-      const userId = req.params.userId
+      const userId = req.params.userId;
       const updatedUser = req.body;
       const newUser = await User.findOneAndUpdate(
         { _id: userId },
