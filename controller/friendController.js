@@ -1,4 +1,4 @@
-const { ObjectId } = require('mongodb');
+
 const { User, Thoughts, Reaction } = require('../models');
 
 

@@ -1,2 +1,3 @@
-Modularize Code.
-New way to configure files and export for better readability.
+* Modularize Code.
+* New way to configure files and export for better readability.
+* Learnt that within the functions its helpful to name variables by their model field names for better understanding and readability.
